@@ -13,17 +13,13 @@ class Library {
 
     static void runApp() throws IOException {
         Scanner sc = new Scanner(System.in);
-        char[] car;
+        char[] input;
         try {
             Parser p = new Parser(new Lex());
             while (true) {
-                car = sc.nextLine().toCharArray();
-//                for(int i=0; i<car.length; i++){
-//                    System.out.println(car[i]+" ");
-//                }
-                Lex.setLine(car);
+                input = sc.nextLine().toCharArray();
+                Lex.setLine(input);
                 p.parse();
-
             }
         } catch (ParseError ex) {
             System.out.println("\nSyntax Error: " + ex);
@@ -36,22 +32,18 @@ class Lex {
     static final char END = '$';
     static final char FALSE = '0';
     static final char TRUE = '1';
-    static char yytext, token, LIT;
-    static char[] cr;
-    static int current;
+    static final char ID ='L';
+    static char yytext, token;
+    static char[] input;
+    static int pos;
 
-//    Lex() throws ParseError {
-//    }
 
     static void next() throws ParseError {
-//        System.out.println("yytext: " + yytext + "\ntoken: " + token);
-        if (current == cr.length) {
+        if (pos == input.length) {
             yytext = token = END;
-            current = 0;
-            System.out.println("In next() 'if' block.");
+            pos = 0;
         } else {
-            System.out.println("In next() 'else' block.");
-            yytext = cr[current++];
+            yytext = input[pos++];
             if (yytext == '=') token = yytext;
             else if (yytext == '?') token = yytext;
             else if (yytext == '(') token = yytext;
@@ -62,7 +54,7 @@ class Lex {
             else if (yytext == '|') token = yytext;
             else if (yytext == '0') token = FALSE;
             else if (yytext == '1') token = TRUE;
-            else if (Character.isLowerCase(yytext)) LIT = token = yytext;
+            else if (Character.isLowerCase(yytext)) token = ID;
             else if (yytext == ' ') next();
             else {
                 System.out.println("Unexpected character: " + yytext + "\n");
@@ -72,16 +64,11 @@ class Lex {
     }
 
     static void setLine(char[] c) {
-        yytext = token = ' ';
-        cr = c;
+        input = c;
+        pos = 0;
     }
 
-    char check(char tok) { //return lex val if matched else null char
-        System.out.println("-------------------------------\\");
-        System.out.println("tok in check: " + tok);
-        System.out.println("token in check: " + token);
-        System.out.println("Current yytext: " + yytext);
-        System.out.println("-------------------------------/");
+    char check(char tok) {
         if (tok == token) return yytext;
         else return 0;
     }
@@ -89,7 +76,6 @@ class Lex {
     char match(char tok) throws ParseError { // same but consumes the token
         char lexval = check(tok);
         if (lexval != 0) {
-            System.out.println("Match found!: {" + lexval + "}\n");
             next();
         }
         return lexval;
