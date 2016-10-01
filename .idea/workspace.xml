@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6375279a-6e19-4df7-82f0-651b712914ca" name="Default" comment="Completed version, functional">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Parsing/p1/Lex.class" afterPath="$PROJECT_DIR$/out/production/Parsing/p1/Lex.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Parsing/p1/Library.class" afterPath="$PROJECT_DIR$/out/production/Parsing/p1/Library.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Parsing/p1/ParseError.class" afterPath="$PROJECT_DIR$/out/production/Parsing/p1/ParseError.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Parsing/p1/Parser.class" afterPath="$PROJECT_DIR$/out/production/Parsing/p1/Parser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/p1/Library.java" afterPath="$PROJECT_DIR$/src/p1/Library.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/p1/Parser.java" afterPath="$PROJECT_DIR$/src/p1/Parser.java" />
-    </list>
+    <list default="true" id="6375279a-6e19-4df7-82f0-651b712914ca" name="Default" comment="Completed version, functional" />
     <ignored path="Parsing.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -627,15 +618,15 @@
       <updated>1475150761661</updated>
       <workItem from="1475150771530" duration="11104000" />
       <workItem from="1475170290577" duration="2152000" />
-      <workItem from="1475364298678" duration="1158000" />
+      <workItem from="1475364298678" duration="1325000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14414000" />
+    <option name="totallyTimeSpent" value="14581000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
