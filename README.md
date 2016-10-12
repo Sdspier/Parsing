@@ -8,10 +8,10 @@ In Part A of this exercise, transformations are applied to the following grammar
 first() and Follows() sets are written, and the usual Java/C precendence and associativity rules are applied.
 
 
-S      -> Assign EOL | Query EOL
-Assign -> ID EQ Exp
-Query  -> ID QMARK
-Exp    -> Exp AND Exp | Exp OR Exp | Exp XOR Exp | NOT Exp | '(' Exp ')' | ID | TRUE | FALSE
+>S      -> Assign EOL | Query EOL
+>Assign -> ID EQ Exp
+>Query  -> ID QMARK
+>Exp    -> Exp AND Exp | Exp OR Exp | Exp XOR Exp | NOT Exp | '(' Exp ')' | ID | TRUE | FALSE
 
 ### Part B: Recursive Descent Parser
 
